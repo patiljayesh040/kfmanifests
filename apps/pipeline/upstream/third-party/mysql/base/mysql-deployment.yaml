@@ -33,12 +33,12 @@ spec:
           name: mysql
         volumeMounts:
         - mountPath: /var/lib/mysql
-          name: mysql-persistent-storage
+          name: mysql-persistent-storage-1-6
         resources:
             requests:
-              cpu: 100m
-              memory: 800Mi
+              cpu: 2
+              memory: 4Gi
       volumes:
-      - name: mysql-persistent-storage
+      - name: mysql-persistent-storage-1-6
         persistentVolumeClaim:
-          claimName: mysql-pv-claim
+          claimName: mysql-pv-claim-1-6
