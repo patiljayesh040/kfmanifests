@@ -66,9 +66,9 @@ spec:
             periodSeconds: 15
             failureThreshold: 60
           volumeMounts:
-            - name: katib-mysql
+            - name: katib-mysql-persistent-storage-1-6
               mountPath: /var/lib/mysql
       volumes:
-        - name: katib-mysql
+        - name: katib-mysql-persistent-storage-1-6
           persistentVolumeClaim:
-            claimName: katib-mysql
+            claimName: katib-mysql-pv-claim-1-6
